@@ -29,7 +29,7 @@ const Todo = () => {
   };
 
   return (
-      <div className="w-full max-w-xl bg-white rounded-lg shadow-lg p-6">
+      <div className="w-full max-w-xl mx-auto  bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
           📝 Todo App
         </h1>

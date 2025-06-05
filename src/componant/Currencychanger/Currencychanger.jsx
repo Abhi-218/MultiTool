@@ -55,7 +55,7 @@ const Currencychanger = () => {
   };
 
   return (
-      <form className="w-full max-w-md bg-white bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-xl space-y-6">
+      <form className="w-full max-w-xl mx-auto bg-white bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-xl space-y-6">
         <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
           💱 Currency Converter
         </h1>
