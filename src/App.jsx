@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import Counter from "./componant/counter";
+import  { useState } from "react";
 import Bgchanger from "./componant/bgchanger";
 import { Outlet } from "react-router-dom";
 import Navbar from "./componant/navbar";
 function App() {
   const [bgchange, setBgchnage] = useState("#94a3b8");
-
+        // useAdSense();
   return (
     <>
       <div
@@ -13,7 +12,7 @@ function App() {
         style={{ background: bgchange }}
       >
         <Navbar />
-        <div className="w-full max-w-screen-xl">
+        <div className="w-full max-w-screen-xl ">
           <Outlet />
         </div>
         <Bgchanger Setbgchange={setBgchnage} />

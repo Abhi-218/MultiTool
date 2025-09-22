@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { AdSenseAd } from "./AdSenseAd";
 
 const Password = () => {
   const [includeNumbers, setIncludeNumbers] = useState(true);
@@ -89,6 +90,8 @@ const Password = () => {
           </label>
         </div>
       </div>
+
+      <AdSenseAd/>
     </div>
   );
 };  
