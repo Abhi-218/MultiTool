@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CCinputbox from "./ccinputbox";
+import { Helmet } from "react-helmet";
 
 const Currencychanger = () => {
   const [data, setData] = useState({});
@@ -56,6 +57,15 @@ const Currencychanger = () => {
 
   return (
       <form className="w-full max-w-xl mx-auto bg-white bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-xl space-y-6">
+    <Helmet>
+  <title>Currency Converter - Multi Tool</title>
+  <meta
+    name="description"
+    content="Free online currency converter tool. Convert between different currencies quickly and easily."
+  />
+  <meta name="keywords" content="currency converter, money converter, exchange rates, online converter" />
+</Helmet>
+
         <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
           💱 Currency Converter
         </h1>
@@ -88,6 +98,7 @@ const Currencychanger = () => {
           selectCurrency={to}
         />
       </form>
+
   );
 };
 
