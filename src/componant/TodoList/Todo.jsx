@@ -30,42 +30,40 @@ const Todo = () => {
   };
 
   return (
-      <div className="w-full max-w-xl mx-auto  bg-white rounded-lg shadow-lg p-6">
+    <div className="w-full max-w-xl mx-auto  bg-white rounded-lg shadow-lg p-6">
       <Helmet>
-        <title>To-Do List - Multi Tool</title>
+        <title>Todo List - Multi Tool Three | Simple Task Manager</title>
         <meta
           name="description"
-          content="Stay organized with our simple to-do list tool. Add, track, and manage your daily tasks efficiently."
+          content="Organize your tasks with Multi Tool Three's free Todo List tool. Add, manage, and track your daily activities easily online."
         />
         <meta
           name="keywords"
-          content="to-do list, task manager, productivity, checklist, daily planner"
+          content="todo list, task manager, checklist, productivity tool, multi tool three"
         />
       </Helmet>
 
-        <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
-          📝 Todo App
-        </h1>
+      <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        📝 Todo App
+      </h1>
 
-        <TodoProvider
-          value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
-        >
-          <Todoform />
-          <div className="mt-6 space-y-4">
-            {todos.length === 0 ? (
-              <p className="text-gray-500 text-center">
-                No todos yet. Add one!
-              </p>
-            ) : (
-              todos.map((todo) => (
-                <div key={todo.id} className="w-full">
-                  <Todolist todo={todo} />
-                </div>
-              ))
-            )}
-          </div>
-        </TodoProvider>
-      </div>
+      <TodoProvider
+        value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
+      >
+        <Todoform />
+        <div className="mt-6 space-y-4">
+          {todos.length === 0 ? (
+            <p className="text-gray-500 text-center">No todos yet. Add one!</p>
+          ) : (
+            todos.map((todo) => (
+              <div key={todo.id} className="w-full">
+                <Todolist todo={todo} />
+              </div>
+            ))
+          )}
+        </div>
+      </TodoProvider>
+    </div>
   );
 };
 

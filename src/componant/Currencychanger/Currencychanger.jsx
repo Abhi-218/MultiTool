@@ -56,49 +56,53 @@ const Currencychanger = () => {
   };
 
   return (
-      <form className="w-full max-w-xl mx-auto bg-white bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-xl space-y-6">
-    <Helmet>
-  <title>Currency Converter - Multi Tool</title>
-  <meta
-    name="description"
-    content="Free online currency converter tool. Convert between different currencies quickly and easily."
-  />
-  <meta name="keywords" content="currency converter, money converter, exchange rates, online converter" />
-</Helmet>
-
-        <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
-          💱 Currency Converter
-        </h1>
-
-        <CCinputbox
-          label="From"
-          currencyOptions={options}
-          amount={amount}
-          onAmountchange={(val) => setAmount(val)}
-          onCurrencyChange={(val) => setFrom(val)}
-          selectCurrency={from}
+    <form className="w-full max-w-xl mx-auto bg-white bg-opacity-80 backdrop-blur-md rounded-2xl p-6 shadow-xl space-y-6">
+      <Helmet>
+        <title>
+          Currency Converter - Multi Tool Three | Real-Time Exchange Rates
+        </title>
+        <meta
+          name="description"
+          content="Convert currencies instantly with Multi Tool Three's free Currency Converter. Get real-time exchange rates and accurate conversions for global currencies."
         />
-
-        <div className="flex justify-center">
-          <button
-            onClick={swap}
-            className="bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition-transform transform hover:rotate-180"
-            title="Swap currencies"
-          >
-              <span className="text-xl">🔁</span>
-          </button>
-        </div>
-
-        <CCinputbox
-          label="To"
-          amountDisable
-          currencyOptions={options}
-          amount={convertedAmount}
-          onCurrencyChange={(val) => setTo(val)}
-          selectCurrency={to}
+        <meta
+          name="keywords"
+          content="currency converter, money converter, exchange rates, forex, multi tool three"
         />
-      </form>
+      </Helmet>
 
+      <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">
+        💱 Currency Converter
+      </h1>
+
+      <CCinputbox
+        label="From"
+        currencyOptions={options}
+        amount={amount}
+        onAmountchange={(val) => setAmount(val)}
+        onCurrencyChange={(val) => setFrom(val)}
+        selectCurrency={from}
+      />
+
+      <div className="flex justify-center">
+        <button
+          onClick={swap}
+          className="bg-indigo-600 text-white p-2 rounded-full hover:bg-indigo-700 transition-transform transform hover:rotate-180"
+          title="Swap currencies"
+        >
+          <span className="text-xl">🔁</span>
+        </button>
+      </div>
+
+      <CCinputbox
+        label="To"
+        amountDisable
+        currencyOptions={options}
+        amount={convertedAmount}
+        onCurrencyChange={(val) => setTo(val)}
+        selectCurrency={to}
+      />
+    </form>
   );
 };
 

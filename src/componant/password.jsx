@@ -37,72 +37,79 @@ const Password = () => {
   };
 
   return (
-      <div className="w-full max-w-md mx-auto bg-white bg-opacity-90 backdrop-blur-md rounded-xl p-6 shadow-lg text-black">
+    <div className="w-full max-w-md mx-auto bg-white bg-opacity-90 backdrop-blur-md rounded-xl p-6 shadow-lg text-black">
       <Helmet>
-        <title>Password Generator - Multi Tool</title>
+        <title>
+          Password Generator - Multi Tool Three | Create Strong & Secure
+          Passwords
+        </title>
         <meta
           name="description"
-          content="Generate strong and secure passwords easily with our free tool."
+          content="Use Multi Tool Three's free Password Generator to create strong, secure, and random passwords instantly. Protect your online accounts with powerful passwords."
+        />
+        <meta
+          name="keywords"
+          content="password generator, strong password, secure password, random password, multi tool three"
         />
       </Helmet>
-        <h1 className="text-2xl font-bold text-center mb-6">
-          🔐 Password Generator
-        </h1>
+      <h1 className="text-2xl font-bold text-center mb-6">
+        🔐 Password Generator
+      </h1>
 
-        <div className="flex">
-          <input
-            type="text"
-            value={password}
-            readOnly
-            ref={passRef}
-            className="flex-grow px-3 py-2 text-lg bg-gray-100 rounded-l-md border border-gray-300 outline-none"
-          />
-          <button
-            onClick={copyToClipboard}
-            className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-r-md transition"
-          >
-            {copied ? "Copied!" : "Copy"}
-          </button>
-        </div>
-
-        <div className="mt-10 space-y-8 text-sm">
-          <div className="flex items-center justify-between">
-            <label className="font-medium">Length: {length}</label>
-            <input
-              type="range"
-              min={6}
-              max={20}
-              value={length}
-              onChange={(e) => setLength(parseInt(e.target.value))}
-              className="w-2/3"
-            />
-          </div>
-
-          <div className="flex items-center gap-4">
-            <input
-              id="numbers"
-              type="checkbox"
-              checked={includeNumbers}
-              onChange={() => setIncludeNumbers((prev) => !prev)}
-            />
-            <label htmlFor="numbers" className="cursor-pointer">
-              Include Numbers
-            </label>
-
-            <input
-              id="symbols"
-              type="checkbox"
-              checked={includeSymbols}
-              onChange={() => setIncludeSymbols((prev) => !prev)}
-            />
-            <label htmlFor="symbols" className="cursor-pointer">
-              Include Symbols
-            </label>
-          </div>
-        </div>
-
-        <AdSenseAd />
+      <div className="flex">
+        <input
+          type="text"
+          value={password}
+          readOnly
+          ref={passRef}
+          className="flex-grow px-3 py-2 text-lg bg-gray-100 rounded-l-md border border-gray-300 outline-none"
+        />
+        <button
+          onClick={copyToClipboard}
+          className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-r-md transition"
+        >
+          {copied ? "Copied!" : "Copy"}
+        </button>
       </div>
+
+      <div className="mt-10 space-y-8 text-sm">
+        <div className="flex items-center justify-between">
+          <label className="font-medium">Length: {length}</label>
+          <input
+            type="range"
+            min={6}
+            max={20}
+            value={length}
+            onChange={(e) => setLength(parseInt(e.target.value))}
+            className="w-2/3"
+          />
+        </div>
+
+        <div className="flex items-center gap-4">
+          <input
+            id="numbers"
+            type="checkbox"
+            checked={includeNumbers}
+            onChange={() => setIncludeNumbers((prev) => !prev)}
+          />
+          <label htmlFor="numbers" className="cursor-pointer">
+            Include Numbers
+          </label>
+
+          <input
+            id="symbols"
+            type="checkbox"
+            checked={includeSymbols}
+            onChange={() => setIncludeSymbols((prev) => !prev)}
+          />
+          <label htmlFor="symbols" className="cursor-pointer">
+            Include Symbols
+          </label>
+        </div>
+      </div>
+
+      <AdSenseAd />
+    </div>
   );
 };
 
